@@ -10,6 +10,7 @@ ENTER=press enter key
     sudo ln -s /opt/cmake-3.28.6-linux-x86_64/bin/* /usr/local/bin
 3. update gcc and g++ to 12:
     (to do)
+    (https://blog.byhi.org/archives/586372ad.html)
 
 1.install requierements
     bash get_requirements.sh
