@@ -1,0 +1,54 @@
+ENTER=press enter key
+update cmake to 3.24 or higher:
+    sudo apt remove cmake
+    cp cmake-3.28.6-linux-x86_64.sh /opt/
+    cd /opt
+    chmod +x cmake-3.28.6-linux-x86_64.sh
+    bash cmake-3.28.6-linux-x86_64.sh
+    sudo ln -s /opt/cmake-3.28.6-linux-x86_64/bin/* /usr/local/bin
+update gcc and g++ to 12:
+
+
+1.install requierements
+    bash get_requirements.sh
+2.1 fetch a web page
+    a)sudo apt install telnet
+    b)telnet cs144.keithw.org http
+        GET /hello HTTP/1.1 ENTER
+        Host: cs144.keithw.org ENTER
+        Connection: close ENTER
+        ENTER
+    c)telnet cs144.keithw.org http
+        GET /lab0/ursocool HTTP/1.1 ENTER
+        Host: cs144.keithw.org ENTER
+        Connection: close ENTER
+        ENTER
+
+        And then i see my secret code is "73494".
+2.2 send yourself an email
+    telnet smtp.163.com smtp
+        helo 163.com ENTER
+        auth login ENTER
+        MAIL FROM: mymailname@163.com ENTER
+        REPT TO: mymailname@163.com ENTER
+        DATA ENTER
+        From: mymailname@163.com
+        To: mymailname@163.com
+        Subject: Hello from CS144 Lab 0!
+        ENTER
+2.3 Listening and Connecting
+    a)sudo apt install netcat
+    b)netcat -v -l -p 9090 (terminal A)
+    c)telnet localhost 9090 (terminal B)
+    d)now i can type any words in one terminal and press ENTER, the words appear in another terminal.
+    e)shut down netcat and telnet will be shuted down too.
+3.1 Writing a network program using an OS stream socket
+    a)update cmake to 3.24 or higher version(look above)
+    b)update gcc to 12
+    c)git clone https://github.com/cs144/minnow
+    d)cd minnow
+    e)cmake -S . -B build
+    f)cmake --build build
+        
+
+    
