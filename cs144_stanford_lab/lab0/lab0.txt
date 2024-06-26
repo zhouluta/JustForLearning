@@ -1,13 +1,15 @@
 ENTER=press enter key
-update cmake to 3.24 or higher:
+1. install requirements:
+    bash get_requirements.sh
+2. update cmake to 3.24 or higher:
     sudo apt remove cmake
-    cp cmake-3.28.6-linux-x86_64.sh /opt/
     cd /opt
+    wget https://github.com/Kitware/CMake/releases/download/v3.28.6/cmake-3.28.6-linux-x86_64.sh
     chmod +x cmake-3.28.6-linux-x86_64.sh
     bash cmake-3.28.6-linux-x86_64.sh
     sudo ln -s /opt/cmake-3.28.6-linux-x86_64/bin/* /usr/local/bin
-update gcc and g++ to 12:
-
+3. update gcc and g++ to 12:
+    (to do)
 
 1.install requierements
     bash get_requirements.sh
