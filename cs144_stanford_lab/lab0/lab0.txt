@@ -50,8 +50,22 @@ ENTER=press enter key
     b)update gcc to 12
     c)git clone https://github.com/cs144/minnow
     d)cd minnow
-    e)cmake -S . -B build
-    f)cmake --build build
-        
-
+    e)cmake -S . -B build (-S:specify the path to the source code directory -B:specify the path to the build directory)
+    f)cmake --build build (--build:compile and build, can specify the build directory)
+3.3 Reading the minnow support code
+    a)read these public interfaces in these files:
+        util/socket.hh
+        util/address.hh
+        util/file_descriptor
+    b)note that Socket is a type of FileDescriptor and the TCPSocket is a type of Socket.
+3.4 Writing webget
+    a)working directory: minnow/build
+    b)edit ../apps/webget.cc
+    c)complete the get_url()
+    d)notice: http, \r\n, Connection: close, EOF
+    e)make
+    f)./apps/webget cs144.keithw.org /hello
+    g)cd ..
+    h)cmake --build build --target check_webget
+    i)try some other hostname and path, make sure the program can also work properly.
     
