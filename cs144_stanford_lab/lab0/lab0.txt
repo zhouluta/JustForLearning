@@ -68,4 +68,10 @@ ENTER=press enter key
     g)cd ..
     h)cmake --build build --target check_webget
     i)try some other hostname and path, make sure the program can also work properly.
+4   A in-memory reliable byte stream.
+    a)edit src/byte_stream.cc and src/byte_stream.hh(pwd:minnow/)
+    b)初始化 byteStream 时要按定义的顺序，否则编译会报错
+    c)cmake --build build --target format
+    d)cmake --build build --target check0
+    e)cmake --build build --target tidy
     
